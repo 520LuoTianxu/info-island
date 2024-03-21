@@ -96,3 +96,9 @@ const comBtnList = computed(() => {
   return cloneList
 })
 </script>
+
+<style lang="scss" scoped>
+.align-center {
+  margin-top: -4px;
+}
+</style>

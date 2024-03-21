@@ -1,5 +1,11 @@
 <template>
-  <n-modal class="go-chart-data-request" v-model:show="modelShowRef" :mask-closable="false" :closeOnEsc="false">
+  <n-modal
+    class="go-chart-data-request"
+    v-model:show="modelShowRef"
+    :mask-closable="false"
+    :closeOnEsc="true"
+    :onEsc="onEsc"
+  >
     <n-card :bordered="false" role="dialog" size="small" aria-modal="true" style="width: 1000px; height: 800px">
       <template #header></template>
       <template #header-extra> </template>
@@ -21,7 +27,10 @@
               {{ requestContentTypeObj[requestContentType] }}
             </n-tag>
           </div>
-          <n-button type="primary" @click="closeAndSendHandle"> {{ saveBtnText || '保存 & 发送请求' }}</n-button>
+          <div>
+            <n-button class="go-mr-3" @click="closeHandle">取消</n-button>
+            <n-button type="primary" @click="closeAndSendHandle"> {{ saveBtnText || '保存 & 发送请求' }}</n-button>
+          </div>
         </n-space>
       </template>
     </n-card>
@@ -69,6 +78,10 @@ const closeHandle = () => {
 const closeAndSendHandle = () => {
   emit('update:modelShow', false)
   emit('sendHandle')
+}
+
+const onEsc = () => {
+  closeHandle()
 }
 </script>
 
