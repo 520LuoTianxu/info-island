@@ -47,18 +47,6 @@
     <br/>
     <br/>
     <a
-      href="https://www.qeasy.cloud/"
-      target="_blank"
-      style="
-        padding: 10px 20px;
-        display: inline-block;
-        border-radius: 10px;
-        background: #f9f9f9;
-      ">
-      <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
-    </a>
-    <span> &nbsp;</span>
-    <a
       href="http://doc.zyplayer.com/#/integrate/zyplayer-doc?utm=goview"
       target="_blank"
       style="
@@ -68,9 +56,8 @@
         background: #f9f9f9;
       ">
       <img src="readme/sponsors/zyplayer-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
-    </a>  
-    <br/>
-    <br/>
+    </a>
+    <span> &nbsp;</span>
     <a
       href="https://gitee.com/dandiankeji/icampus"
       target="_blank"
@@ -82,6 +69,8 @@
       ">
       <img src="readme/sponsors/dandian-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
     </a>  
+    <br/>
+    <br/>
     <a
       href="https://www.mingdao.com?s=utm_88&utm_source=Goview&utm_medium=banner&utm_campaign=gitee&utm_content=IT%E8%B5%8B%E8%83%BD%E4%B8%9A%E5%8A%A1"
       target="_blank"
@@ -92,9 +81,7 @@
         background: #f9f9f9;
       ">
       <img src="readme/sponsors/mdy-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
-    </a>
-    <br/>
-    <br/>
+    </a>  
     <a
       href="https://iotdoc.sagoo.cn/"
       target="_blank"
@@ -106,6 +93,8 @@
       ">
       <img src="readme/sponsors/shaguo-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
+    <br/>
+    <br/>
     <a
       href="http://www.yunchengxc.com/"
       target="_blank"
@@ -117,8 +106,6 @@
       ">
       <img src="readme/sponsors/yuncheng-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
-    <br/>
-    <br/>
     <a
       href="https://www.diboot.com?from=gv/"
       target="_blank"
