@@ -1,11 +1,5 @@
 <template>
   <div class="go-project-template-market">
-<<<<<<< HEAD
-    <n-space vertical>
-      <n-image object-fit="contain" height="300" preview-disabled :src="requireErrorImg()"></n-image>
-      <n-h3>暂时还没有东西呢</n-h3>
-    </n-space>
-=======
     <div class="content-box">
       <n-space vertical>
         <img src="https://goviewpro.goviewlink.com/charts-img-db/charts-img-db_id_5pimyysnnh8000.png" style="width: 100%" />
@@ -15,7 +9,6 @@
         </n-button>
       </n-space>
     </div>
->>>>>>> dev
   </div>
 </template>
 
@@ -24,18 +17,8 @@ import { requireErrorImg } from '@/utils'
 </script>
 
 <style lang="scss" scoped>
-<<<<<<< HEAD
-@include go("project-template-market") {
-  margin-top: 100px;
-  @extend .go-flex-center;
-=======
 @include go('project-template-market') {
   box-sizing: border-box;
-  height: calc(100vh - 62px);
-  padding-top: 3vh;
-  .content-box {
-    width: 700px;
-    margin: 0 auto 0;
     padding: 20px;
     border-radius: 10px;
     background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, rgba(29, 83, 163, 0.3) 99.09%);
@@ -50,7 +33,5 @@ import { requireErrorImg } from '@/utils'
 
 @include dark() {
   @include go('project-template-market') {
-    background-color: #18181c;
   }
-}
 </style>
