@@ -93,21 +93,33 @@ watch(
     position: absolute;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     border-radius: 5px;
+=======
+>>>>>>> dev
     overflow: hidden;
   }
   .select-border {
     left: 0;
     top: 0;
+<<<<<<< HEAD
     opacity: 0.5;
     border-width: 2px;
+=======
+    opacity: 1;
+    border-width: 1px;
+>>>>>>> dev
     border-style: solid;
     border-color: v-bind('themeColor');
   }
   .select-background {
     top: 2px;
     left: 2px;
+<<<<<<< HEAD
     opacity: 0.2;
+=======
+    opacity: 0.08;
+>>>>>>> dev
     background-color: v-bind('themeColor');
   }
 }

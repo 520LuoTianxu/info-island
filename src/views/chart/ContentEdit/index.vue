@@ -193,7 +193,10 @@ onMounted(() => {
   @include background-image('background-point');
 
   @include goId('chart-edit-content') {
+<<<<<<< HEAD
     border-radius: 10px;
+=======
+>>>>>>> dev
     overflow: hidden;
     @extend .go-transition;
     @include fetch-theme('box-shadow');

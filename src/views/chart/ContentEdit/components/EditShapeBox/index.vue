@@ -139,7 +139,11 @@ const hide = computed(() => {
       position: absolute;
       width: 100%;
       height: 100%;
+<<<<<<< HEAD
       border-radius: 10px;
+=======
+      border-radius: 4px;
+>>>>>>> dev
     }
 
     .shape-modal-select {
