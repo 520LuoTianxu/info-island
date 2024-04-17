@@ -38,18 +38,16 @@ const isProject = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-$min-width: 520px;
 @include go(header) {
   &-box {
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
+    display: flex;
+    justify-content: space-between;
     &.is-project {
       grid-template-columns: none;
     }
     .header-item {
       display: flex;
       align-items: center;
-      min-width: $min-width;
       &.left {
         justify-content: start;
       }

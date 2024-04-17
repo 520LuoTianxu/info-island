@@ -1,5 +1,5 @@
 <template>
-  <n-space class="header-left-btn" :size="25">
+  <n-space class="header-left-btn" :wrap="false" :size="25">
     <n-button size="small" quaternary @click="goHomeHandle()">
       <template #icon>
         <n-icon :depth="3">
@@ -7,7 +7,7 @@
         </n-icon>
       </template>
     </n-button>
-    <n-space>
+    <n-space :wrap="false">
       <!-- 模块展示按钮 -->
       <n-tooltip v-for="item in btnList" :key="item.key" placement="bottom" trigger="hover">
         <template #trigger>

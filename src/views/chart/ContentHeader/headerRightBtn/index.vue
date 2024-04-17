@@ -1,5 +1,5 @@
 <template>
-  <n-space class="go-mt-0">
+  <n-space class="go-mt-0" :wrap="false">
     <n-button v-for="item in comBtnList" :key="item.title" :type="item.type" ghost @click="item.event">
       <template #icon>
         <component :is="item.icon"></component>
