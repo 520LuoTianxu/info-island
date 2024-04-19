@@ -12,7 +12,7 @@
         :key="item.title"
         draggable
         @dragstart="!item.disabled && dragStartHandle($event, item)"
-        @dragend="!item.disabled && dragendHandle"
+        @dragend="!item.disabled && dragendHandle()"
         @dblclick="dblclickHandle(item)"
         @click="clickHandle(item)"
       >
