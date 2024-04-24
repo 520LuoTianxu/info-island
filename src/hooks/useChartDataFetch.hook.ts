@@ -7,6 +7,7 @@ import { useChartEditStore } from '@/store/modules/chartEditStore/chartEditStore
 import { RequestDataTypeEnum } from '@/enums/httpEnum'
 import { isPreview, newFunctionHandle, intervalUnitHandle } from '@/utils'
 import { setOption } from '@/packages/public/chart'
+import { isNil } from 'lodash'
 
 // 获取类型
 type ChartEditStoreType = typeof useChartEditStore
@@ -101,9 +102,9 @@ export const useChartDataFetch = (
         )
 
         // 定时时间
-        const time = targetInterval && targetInterval.value ? targetInterval.value : globalRequestInterval.value
+        const time = targetInterval && !isNil(targetInterval.value) ? targetInterval.value : globalRequestInterval.value
         // 单位
-        const unit = targetInterval && targetInterval.value ? targetUnit.value : globalUnit.value
+        const unit = targetInterval && !isNil(targetInterval.value) ? targetUnit.value : globalUnit.value
         // 开启轮询
         if (time) {
           fetchInterval = setInterval(fetchFn, intervalUnitHandle(time, unit))
