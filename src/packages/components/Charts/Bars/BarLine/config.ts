@@ -33,7 +33,6 @@ export const lineSeriesItem = {
   },
   symbolSize: 5, //设定实心点的大小
   itemStyle: {
-    color: '#FFE47A',
     borderWidth: 1
   },
   lineStyle: {
