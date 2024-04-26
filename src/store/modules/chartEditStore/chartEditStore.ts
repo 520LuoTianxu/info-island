@@ -172,6 +172,27 @@ export const useChartEditStore = defineStore({
         [ChartEditStoreEnum.REQUEST_GLOBAL_CONFIG]: this.getRequestGlobalConfig
       }
     },
+    // * 获取针对 componentList 顺序排过序的 selectId
+    getSelectIdSortList(ids?: string[]): string[] {
+      if (!this.getTargetChart.selectId.length && !ids) return []
+      const sortArr: string[] = []
+      this.getComponentList.forEach((item: CreateComponentType | CreateComponentGroupType) => {
+        if (ids) {
+          ids.forEach((id: string) => {
+            if (item.id === id) {
+              sortArr.push(id)
+            }
+          })
+        } else {
+          this.getTargetChart.selectId.forEach((id: string) => {
+            if (item.id === id) {
+              sortArr.push(id)
+            }
+          })
+        }
+      })
+      return sortArr
+    },
     // * 设置 editCanvas 数据项
     setEditCanvas<T extends keyof EditCanvasType, K extends EditCanvasType[T]>(key: T, value: K) {
       this.editCanvas[key] = value
@@ -715,18 +736,12 @@ export const useChartEditStore = defineStore({
     // * 创建分组
     setGroup(id?: string | string[], isHistory = true) {
       try {
-        const selectIds = this.idPreFormat(id) || this.getTargetChart.selectId
+        let selectIds = this.idPreFormat(id) || this.getTargetChart.selectId
+        selectIds = this.getSelectIdSortList(selectIds)
         if (selectIds.length < 2) return
 
         loadingStart()
         const groupClass = new PublicGroupConfigClass()
-        // 记录整体坐标
-        const groupAttr = {
-          l: this.getEditCanvasConfig.width,
-          t: this.getEditCanvasConfig.height,
-          r: 0,
-          b: 0
-        }
         const targetList: CreateComponentType[] = []
         const historyList: CreateComponentType[] = []
 
@@ -749,21 +764,35 @@ export const useChartEditStore = defineStore({
             newSelectIds.push(id)
           }
         })
-        newSelectIds.forEach((id: string) => {
+        // 记录整体坐标
+        const groupAttr = {
+          l: 0,
+          t: 0,
+          r: 0,
+          b: 0
+        }
+        newSelectIds.forEach((id: string, index: number) => {
           // 获取目标数据并从 list 中移除 (成组后不可再次成组, 断言处理)
           const item = this.componentList.splice(this.fetchTargetIndex(id), 1)[0] as CreateComponentType
           const { x, y, w, h } = item.attr
-          const { l, t, r, b } = groupAttr
-          // 左
-          groupAttr.l = l > x ? x : l
-          // 上
-          groupAttr.t = t > y ? y : t
-          // 宽
-          groupAttr.r = r < x + w ? x + w : r
-          // 高
-          groupAttr.b = b < y + h ? y + h : b
+          if (index === 0) {
+            groupAttr.l = x
+            groupAttr.t = y
+            groupAttr.r = x + w
+            groupAttr.b = y + h
+          } else {
+            const { l, t, r, b } = groupAttr
+            // 左
+            groupAttr.l = l > x ? x : l
+            // 上
+            groupAttr.t = t > y ? y : t
+            // 宽
+            groupAttr.r = r < x + w ? x + w : r
+            // 高
+            groupAttr.b = b < y + h ? y + h : b
+          }
 
-          targetList.unshift(item)
+          targetList.push(item)
           historyList.push(toRaw(item))
         })
 
@@ -789,7 +818,7 @@ export const useChartEditStore = defineStore({
         loadingFinish()
       } catch (error) {
         console.log(error)
-        window['$message'].error('创建分组失败，请联系管理员！')
+        window['$message'].error('创建分组失败，请联系管理员')
         loadingFinish()
       }
     },
@@ -809,7 +838,7 @@ export const useChartEditStore = defineStore({
           if (isHistory) chartHistoryStore.createUnGroupHistory(cloneDeep([targetGroup]))
 
           // 分离组件并还原位置属性
-          targetGroup.groupList.reverse().forEach(item => {
+          targetGroup.groupList.forEach(item => {
             item.attr.x = item.attr.x + targetGroup.attr.x
             item.attr.y = item.attr.y + targetGroup.attr.y
             if (!callBack) {
@@ -834,7 +863,7 @@ export const useChartEditStore = defineStore({
         loadingFinish()
       } catch (error) {
         console.log(error)
-        window['$message'].error('解除分组失败，请联系管理员！')
+        window['$message'].error('解除分组失败，请联系管理员')
         loadingFinish()
       }
     },
