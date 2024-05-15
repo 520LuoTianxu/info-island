@@ -117,6 +117,19 @@
       ">
       <img src="readme/sponsors/diboot-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
+    <br/>
+    <br/>
+    <a
+      href="https://www.xingyunzuo.cn/"
+      target="_blank"
+      style="
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #f9f9f9;
+      ">
+      <img src="readme/sponsors/xingyun-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
+    </a>
   </div>
 </div>
 
