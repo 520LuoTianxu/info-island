@@ -120,7 +120,7 @@
     <br/>
     <br/>
     <a
-      href="https://www.xingyunzuo.cn/"
+      href="https://www.xingyunzuo.cn/?from=goview"
       target="_blank"
       style="
         padding: 10px 20px;
