@@ -4,7 +4,7 @@
       <n-space vertical>
         <img src="https://goviewpro.goviewlink.com/charts-img-db/charts-img-db_id_5pimyysnnh8000.png" style="width: 100%" />
         <img src="https://goviewpro.goviewlink.com/charts-img-db/charts-img-db_id_izetnl0654w00.png" style="height: 400px" />
-        <n-button text tag="a" href="https://ai.goviewlink.com/?channel=mayun" target="_blank" type="primary">
+        <n-button text tag="a" href="https://ai.goviewlink.com/saas/" target="_blank" type="primary">
           前往 GoViewPro 查看 👆
         </n-button>
       </n-space>

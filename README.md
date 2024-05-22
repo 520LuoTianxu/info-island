@@ -1,6 +1,6 @@
 <p align="center">
   <a
-      href="https://ai.goviewlink.com/?channel=mayun"
+      href="https://ai.goviewlink.com/saas/"
       target="_blank"
       style="
         padding: 10px 20px;
@@ -256,6 +256,6 @@ QQ 群：647239611
 
 ## Pro 部分功能展示
 
-体验地址： <a href="https://ai.goviewlink.com/" target="_blank">https://ai.goviewlink.com/</a>
+体验地址： <a href="https://ai.goviewlink.com/saas/" target="_blank">https://ai.goviewlink.com/saas/</a>
 
 ![渲染海报](readme/logo-poster.png)
