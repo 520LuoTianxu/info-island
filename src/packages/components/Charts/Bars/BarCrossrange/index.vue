@@ -4,7 +4,6 @@
     :init-options="initOptions"
     :theme="themeColor"
     :option="option"
-    :manual-update="isPreview()"
     :update-options="{
       replaceMerge: replaceMergeArr
     }"
@@ -23,7 +22,6 @@ import { mergeTheme } from '@/packages/public/chart'
 import config, { includes, seriesItem } from './config'
 import { useChartDataFetch } from '@/hooks'
 import { useChartEditStore } from '@/store/modules/chartEditStore/chartEditStore'
-import { isPreview } from '@/utils'
 import { DatasetComponent, GridComponent, TooltipComponent, LegendComponent } from 'echarts/components'
 import isObject from 'lodash/isObject'
 import cloneDeep from 'lodash/cloneDeep'
@@ -79,5 +77,7 @@ watch(
   }
 )
 
-const { vChartRef } = useChartDataFetch(props.chartConfig, useChartEditStore)
+const { vChartRef } = useChartDataFetch(props.chartConfig, useChartEditStore, (newData: any) => {
+  props.chartConfig.option.dataset = newData
+})
 </script>

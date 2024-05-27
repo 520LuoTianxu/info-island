@@ -1,8 +1,14 @@
 <template>
-  <v-chart ref="vChartRef" :init-options="initOptions" :theme="themeColor" :option="option" :manual-update="isPreview()"
+  <v-chart
+    ref="vChartRef"
+    :init-options="initOptions"
+    :theme="themeColor"
+    :option="option"
     :update-options="{
       replaceMerge: replaceMergeArr
-    }" autoresize></v-chart>
+    }"
+    autoresize
+  ></v-chart>
 </template>
 
 <script setup lang="ts">
@@ -85,5 +91,7 @@ watch(
   }
 )
 
-const { vChartRef } = useChartDataFetch(props.chartConfig, useChartEditStore)
+const { vChartRef } = useChartDataFetch(props.chartConfig, useChartEditStore, (newData: any) => {
+  props.chartConfig.option.dataset = newData
+})
 </script>
