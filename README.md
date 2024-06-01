@@ -133,6 +133,8 @@
   </div>
 </div>
 
+#### 🫶 刚到厦门，在找工作求内推，可直接加Q私聊我：1262327911，感谢
+
 #### 😶 **纯前端** 分支： **`master`**
 
 #### 👻 携带 **后端** 请求分支: **`master-fetch`**
@@ -153,7 +155,9 @@ Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](http
 - `.NET` [https://gitee.com/sun_xiang_yu/go-view-dotnet](https://gitee.com/sun_xiang_yu/go-view-dotnet)
 - `NODE` [https://gitee.com/qwdingyu/led](https://gitee.com/qwdingyu/led)
 - `Docker 镜像` [https://gitee.com/AHEAD4/go-view-docker](https://gitee.com/AHEAD4/go-view-docker)
-- `接口文档`[https://docs.apipost.cn](https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3) (不是最新, 以前端代码为准)
+- `GO-goframe` [https://gitee.com/bufanyun/go-view-server](https://gitee.com/bufanyun/go-view-server)
+- `GO-gin` [https://gitee.com/ls1990/go-view-serve](https://gitee.com/ls1990/go-view-serve)
+- `接口文档` [https://docs.apipost.cn](https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3) (不是最新, 以前端代码为准)
 
 #### 整体介绍
 
