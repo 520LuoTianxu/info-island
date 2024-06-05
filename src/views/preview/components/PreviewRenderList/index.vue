@@ -1,6 +1,7 @@
 <template>
   <div
     class="chart-item"
+    :id="item.id"
     v-for="(item, index) in chartEditStore.componentList"
     :class="animationsClass(item.styles.animations)"
     :key="item.id"
