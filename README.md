@@ -131,7 +131,7 @@
       <img src="readme/sponsors/xingyun-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
     <a
-      href="https://www.mtruning.club?redirect=chengDan"
+      href="https://www.mtruning.club/chengDan/index.html"
       target="_blank"
       style="
         padding: 10px 20px;
