@@ -131,7 +131,7 @@
       <img src="readme/sponsors/xingyun-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
     <a
-      href="https://www.mtruning.club/chengDan/"
+      href="https://www.mtruning.club?redirect=chengDan"
       target="_blank"
       style="
         padding: 10px 20px;
@@ -143,8 +143,6 @@
     </a>
   </div>
 </div>
-
-#### 🫶 刚到厦门，在找工作求内推，可直接加Q私聊我：1262327911，感谢
 
 #### 😶 **纯前端** 分支： **`master`**
 
