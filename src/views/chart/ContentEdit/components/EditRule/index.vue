@@ -13,7 +13,7 @@
     >
     </sketch-rule>
     <div ref="$app" class="edit-screens" @scroll="handleScroll">
-      <div ref="$container" class="edit-screen-container" :style="{ width: width * 2 + 'px' }">
+      <div ref="$container" class="edit-screen-container" :style="{ width: containerWidth }">
         <div
           ref="refSketchRuleBox"
           class="canvas"
@@ -62,8 +62,13 @@ const scale = computed(() => {
   return chartEditStore.getEditCanvas.scale
 })
 
-// 滚动条拖动的高度
+// 滚动条拖动的宽度
 const containerWidth = computed(() => {
+  return `${window.innerWidth * 2}px`
+})
+
+// 滚动条拖动的高度
+const containerHeight = computed(() => {
   return `${height.value * 2}px`
 })
 
@@ -203,14 +208,12 @@ watch(
   (newValue, oldValue) => {
     if (oldValue !== newValue && chartLayoutStore.getRePositionCanvas) {
       chartLayoutStore.setItemUnHandle(ChartLayoutStoreEnum.RE_POSITION_CANVAS, false)
-      handleScroll()
-      setTimeout(() => {
+    }
+    handleScroll()
+    setTimeout(() => {
         canvasPosCenter()
         reDraw()
-      }, 400)
-    } else {
-        reDraw();
-    }
+    }, 400)
   }
 )
 
@@ -337,7 +340,7 @@ window.onKeySpacePressHold = (isHold: boolean) => {
 
   .edit-screen-container {
     position: absolute;
-    height: v-bind('containerWidth');
+    height: v-bind('containerHeight');
     top: 0;
     left: 0;
   }
