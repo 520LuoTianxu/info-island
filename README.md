@@ -222,8 +222,8 @@ Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](http
 
 | 名称 | 版本    | 名称    | 版本  |
 | ---- | ------- | ------- | ----- |
-| node | 16.16.x | npm     | 8.5.x |
-| pnpm | 7.1.x   | windows | 11    |
+| node | 18.20.x | npm     | 10.7.x|
+| pnpm | 8.6.7   | windows | 11    |
 
 已完成图表：
 
