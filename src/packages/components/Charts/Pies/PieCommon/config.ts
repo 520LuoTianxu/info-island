@@ -52,7 +52,11 @@ const option = {
         show: false,
         position: 'center',
         formatter: '{b}',
-        fontSize:12
+        fontWeight: 'normal',
+        fontSize: 14,
+        color: '#454E54',
+        textBorderColor: '#ffffff',
+        textBorderWidth: 1
       },
       emphasis: {
         label: {
