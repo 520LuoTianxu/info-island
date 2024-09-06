@@ -83,17 +83,6 @@
     <br/>
     <br/>
     <a
-      href="https://iotdoc.sagoo.cn/"
-      target="_blank"
-      style="
-        padding: 10px 20px;
-        display: inline-block;
-        border-radius: 10px;
-        background: #f9f9f9;
-      ">
-      <img src="readme/sponsors/shaguo-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
-    </a>
-    <a
       href="http://www.yunchengxc.com/"
       target="_blank"
       style="
@@ -104,8 +93,6 @@
       ">
       <img src="readme/sponsors/yuncheng-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
-    <br/>
-    <br/>
     <a
       href="https://www.diboot.com?from=gv/"
       target="_blank"
@@ -117,6 +104,8 @@
       ">
       <img src="readme/sponsors/diboot-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
+    <br/>
+    <br/>
     <a
       href="https://www.xingyunzuo.cn/?from=goview"
       target="_blank"
@@ -128,8 +117,6 @@
       ">
       <img src="readme/sponsors/xingyun-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
     </a>
-    <br/>
-    <br/>
     <a
       href="https://www.mtruning.club/chengDan/index.html"
       target="_blank"
